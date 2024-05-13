@@ -1,0 +1,13 @@
+{
+  "recommendations": [
+    "ms-python.python", // Python開発の基本拡張機能
+    "ms-python.vscode-pylance", // Python言語の高性能サポート
+    "donjayamanne.python-extension-pack", // Python開発の拡張機能パック
+    "charliermarsh.ruff", // Pythonのコードフォーマッター and リンター
+    "bungcip.better-toml", // TOMLファイルのサポート
+    "magicstack.MagicPython", // Pythonのシンタックスハイライト強化
+    "mgesbert.python-path", // PYTHONPATH環境変数の管理
+    "damildrizzy.fastapi-snippets", // FastAPI用スニペット集
+    "EricSia.pythonsnippets3" // Python開発用の豊富なスニペット集
+  ]
+}
