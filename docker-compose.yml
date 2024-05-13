@@ -3,7 +3,7 @@ version: '3'
 services:
   app:
     build:
-      dockerfile: ./src/.docker/server/Dockerfile
+      dockerfile: ./.docker/server/Dockerfile
       context: .
     environment:
       DATABASE_HOST: postgres
@@ -12,7 +12,9 @@ services:
       DATABASE_USER: ${DATABASE_USER}
       DATABASE_PASSWORD: ${DATABASE_PASSWORD}
     ports:
-      - "8000:8000"
+      - '8000:8000'
+    volumes:
+      - ./src:/app/src
     working_dir: /app
     command: poetry run uvicorn src.main:app --host 0.0.0.0 --port 8000 --reload
 

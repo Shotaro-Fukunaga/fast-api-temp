@@ -32,6 +32,15 @@ setup-poetry:
 	poetry --version || curl -sSL https://install.python-poetry.org | python3 -
 	poetry install
 
+# ライブラリのインストールとビルド
+add-lib:
+	$(eval LIB_NAME := $(filter-out $@,$(MAKECMDGOALS)))
+	poetry add $(LIB_NAME)
+	docker compose build app
+
+%:
+	@:
+
 # サーバーの開発モード起動（デフォルト8000番）
 # ポート8000番だとDockerサーバーのポートと被るので、必要に応じてポートを指定してください。
 # 例：make dev 8001
